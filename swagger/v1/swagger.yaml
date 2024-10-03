@@ -1,0 +1,50 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/v1/text_messages":
+    get:
+      summary: list text_messages
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create text_message
+      responses:
+        '200':
+          description: successful
+  "/v1/text_messages/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show text_message
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update text_message
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update text_message
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete text_message
+      responses:
+        '200':
+          description: successful
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
